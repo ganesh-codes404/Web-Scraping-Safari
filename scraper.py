@@ -12,7 +12,7 @@ data = []
 
 for r in repos:
     h2_tag = r.find("h2") #we find the h2 tag here to find the name of the repo 
-    a_tag = h2_tag.find("a")
+    a_tag = h2_tag.find("a") #finds the anchor tags
     name = a_tag.get_text(strip=True).replace(' ', '').replace('\n', '')
     link = "https://github.com" + r.h2.a["href"]
     data.append([name, link])
